@@ -25,5 +25,19 @@ const products = [
 ]
 
 for (const product of products) {
-    console.log(product);
+    // console.log(product);
 }
+
+function matchedProducts(products, search) {
+    const matched = [];
+
+    for (const product of products) {
+        if (product.name.toLowerCase().includes(search.toLowerCase())) {
+            matched.push(product);
+        }
+    }
+    return matched;
+}
+
+const result = matchedProducts(products, 'laptop');
+console.log(result);
